@@ -1,0 +1,20 @@
+Official Website - https://behave.readthedocs.io/en/stable/install.html
+Installation of behave:
+1. pip install git+https://github.com/behave/behave
+2. pip install requests
+----------------------------------------------
+API Automation using behave framework:
+1. Create one fresh project
+2. Create one directory under it named - "features"
+3. Create features file inside this directory
+4. Then create one new new python package inside features --> "steps"
+5. All the steps methods reside inside the "steps"
+6. Create one directory named "utilities"
+7. put following files under it:
+	1. properties.ini - this file will have all the URLs related to environment
+	2. configurations.py - to read data from ini file (import configparser package)
+	3. resources.py - this is a python class file, which will have all API resources
+	4. post_payload.py - this file contains all the methods which returns request payloads
+8. For Allure reports:
+	1. 
+
