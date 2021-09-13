@@ -11,9 +11,9 @@ def step_impl(context):
     context.APIheaders = {"Content-Type": "application/json"}
 
 
-@when('I call Requests post method with request payload to create user')
-def step_impl(context):
-    context.response = requests.post(context.URL, json=createUserPayload(), headers=context.APIheaders)
+@when('I call Requests post method with request payload to create user "{user}"')
+def step_impl(context, user):
+    context.response = requests.post(context.URL, json=createUserPayload(user), headers=context.APIheaders)
     response_Json = context.response.json()
     print(response_Json)
     name = response_Json['name']
@@ -22,7 +22,7 @@ def step_impl(context):
     print("The Id is : " + id)
 
 
-@then('I should be able to create a user successfully')
-def step_impl(context):
+@then('I should be able to create a user successfully "{user}"')
+def step_impl(context, user):
     assert context.response.status_code == 201
-    assert context.response.json()['name'] == 'morpheus'
+    assert context.response.json()['name'] == user

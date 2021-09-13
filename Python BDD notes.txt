@@ -16,5 +16,11 @@ API Automation using behave framework:
 	3. resources.py - this is a python class file, which will have all API resources
 	4. post_payload.py - this file contains all the methods which returns request payloads
 8. For Allure reports:
-	1. 
-
+	1. pip install allure-behave (To install allure reports)
+	2. behave -f allure_behave.formatter:AllureFormatter -o reports/
+	    (-o is for output folder, it will create reports folder in the project and generate json files)
+	3. To generate reports from json files we need to first download the allure package from
+	     - https://github.com/allure-framework/allure2/releases/tag/2.14.0
+	     - Then unzip it and paste the path till bin to environment variables path
+	     - Now on cmd navigate to project directory and run the following command
+	    allure serve reports/
