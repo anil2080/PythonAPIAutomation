@@ -24,3 +24,10 @@ API Automation using behave framework:
 	     - Then unzip it and paste the path till bin to environment variables path
 	     - Now on cmd navigate to project directory and run the following command
 	    allure serve reports/
+
+9. For HTML Normal Reports:
+    1.pip install behave-html-formatter
+    2.behave -f behave_html_formatter:HTMLFormatter -o behave.html
+
+    It will generate one behave.html file which can be open in browser easily
+
